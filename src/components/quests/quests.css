@@ -1,0 +1,43 @@
+/* QUESTS page-local styles (quests.md §1, §4) */
+
+/* Banner art "breathing" loop — the mimic-hulk hull is alive.
+   Uses the standalone `scale` property so it composes with the
+   framer-motion translate parallax on the same element. */
+@keyframes hull-breathe {
+  from { scale: 1; }
+  to { scale: 1.015; }
+}
+.banner-breathe img {
+  animation: hull-breathe 5s ease-in-out infinite alternate;
+}
+
+/* Big moment 5 — "The Mountain Goes By": ring-ripple over deep water. */
+.ring-ripple {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 340px;
+  height: 340px;
+  margin: -170px 0 0 -170px;
+  border: 1px solid rgba(74, 143, 176, 0.45);
+  border-radius: 9999px;
+  opacity: 0;
+  animation: ring-ripple 7s linear infinite;
+  pointer-events: none;
+}
+@keyframes ring-ripple {
+  0% { transform: scale(0.25); opacity: 0; }
+  12% { opacity: 0.8; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-breathe img {
+    animation: none;
+  }
+  .ring-ripple {
+    animation: none;
+    opacity: 0.35;
+    transform: scale(0.9);
+  }
+}

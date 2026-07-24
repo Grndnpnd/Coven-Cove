@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: auto; /* Lenis owns smooth scrolling */
+  }
+  body {
+    @apply bg-ink text-bone font-body;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: rgba(185, 138, 62, 0.35);
+    color: #efe6d8;
+  }
+  h1, h2, h3 {
+    @apply font-display text-bone;
+  }
+  /* Old-paper grain over everything (design.md §4) */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    pointer-events: none;
+    opacity: 0.05;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  /* Hag-light glow, candle flicker (design.md §4–5) */
+  .hag-glow {
+    box-shadow: 0 0 24px rgba(159, 214, 63, 0.18);
+  }
+  .hag-text-glow {
+    text-shadow: 0 0 14px rgba(159, 214, 63, 0.45);
+  }
+  .flicker {
+    animation: hag-flicker 4.2s steps(1, end) infinite;
+  }
+  /* Brass ledger-corner ticks for important panels */
+  .corner-ticks {
+    position: relative;
+  }
+  .corner-ticks::before,
+  .corner-ticks::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+  }
+  .corner-ticks::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid #b98a3e;
+    border-left: 2px solid #b98a3e;
+  }
+  .corner-ticks::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid #b98a3e;
+    border-right: 2px solid #b98a3e;
+  }
+  /* Chapter-opening drop cap (design.md §3) */
+  .drop-cap::first-letter {
+    font-family: "IM Fell English", serif;
+    font-size: 3.4em;
+    float: left;
+    line-height: 0.85;
+    padding-right: 0.12em;
+    padding-top: 0.05em;
+    color: #b98a3e;
+  }
+  /* Animated hag-green link underline */
+  .link-hag {
+    position: relative;
+  }
+  .link-hag::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: #9fd63f;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .link-hag:hover::after,
+  .link-hag.active::after {
+    transform: scaleX(1);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes hag-flicker {
+  0%, 100% { opacity: 1; }
+  18% { opacity: 0.92; }
+  22% { opacity: 1; }
+  47% { opacity: 0.86; }
+  53% { opacity: 0.97; }
+  71% { opacity: 0.9; }
+  76% { opacity: 1; }
+}
+
+/* SeamWalk particles — transform-only drifting motes */
+.sand-mote,
+.snow-flake {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.sand-mote {
+  background: rgba(255, 157, 92, 0.55);
+  animation-name: sand-drift;
+}
+.snow-flake {
+  background: rgba(191, 227, 239, 0.7);
+  animation-name: snow-drift;
+}
+@keyframes sand-drift {
+  from { transform: translate3d(0, -10px, 0); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { transform: translate3d(38px, 60px, 0); opacity: 0; }
+}
+@keyframes snow-drift {
+  from { transform: translate3d(0, -14px, 0); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  to { transform: translate3d(-16px, 80px, 0); opacity: 0; }
+}
+
+/* Hero ken-burns drift — never stops (home.md §1) */
+.ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
+}
+@keyframes ken-burns {
+  from { transform: scale(1) translateX(0); }
+  to { transform: scale(1.06) translateX(-1%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flicker {
+    animation: none;
+  }
+  .sand-mote,
+  .snow-flake {
+    animation: none;
+    opacity: 0.4;
+  }
+  .ken-burns {
+    animation: none;
+  }
+}

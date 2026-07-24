@@ -1,0 +1,493 @@
+{
+  "name": "Morgha Brineshroud",
+  "type": "npc",
+  "img": "assets/tokens/morgha-brineshroud.png",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 16,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 13,
+        "proficient": 0
+      },
+      "con": {
+        "value": 16,
+        "proficient": 1
+      },
+      "int": {
+        "value": 14,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 1
+      },
+      "cha": {
+        "value": 15,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 15
+      },
+      "hp": {
+        "value": 82,
+        "max": 82,
+        "formula": "11d8 + 33"
+      },
+      "movement": {
+        "walk": 30,
+        "units": "ft",
+        "hover": false,
+        "swim": 40
+      },
+      "senses": {
+        "darkvision": 60,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "neutral evil",
+      "cr": 5,
+      "xp": {
+        "value": 1800
+      },
+      "type": {
+        "value": "monstrosity",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "biography": {
+        "value": "<p>Sea hag of the Drowned Past; daughter of Bavlorna Blightstraw of Hither and one of the Three who rule Coven Cove. A gaunt, drowned thing of the shore: greenish-gray skin, black kelp hair, eyes like coins in bilge water, barnacles crusting her rags like armor. She is the coven's rememberer, keeper of the debt-ledger, and she prices locations, not things. While the coven circle is dead she has no Shared Spellcasting and no Hag Eye; everything else works, and she is never more than a Brine Step from deep water.</p>",
+        "public": ""
+      },
+      "source": {
+        "custom": "Coven Cove GM Guide",
+        "revision": 1,
+        "rules": "2014"
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 0
+      },
+      "ani": {
+        "value": 0
+      },
+      "arc": {
+        "value": 0
+      },
+      "ath": {
+        "value": 0
+      },
+      "dec": {
+        "value": 2
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 2
+      },
+      "itm": {
+        "value": 0
+      },
+      "inv": {
+        "value": 0
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 1
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 0
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 0
+      },
+      "sur": {
+        "value": 0
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "giant",
+          "sylvan"
+        ],
+        "custom": "Aquan"
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Morgha Brineshroud",
+    "texture": {
+      "src": "assets/tokens/morgha-brineshroud.png"
+    }
+  },
+  "items": [
+    {
+      "name": "Amphibious",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Morgha can breathe air and water.</p>"
+        },
+        "identifier": "amphibious",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Illusory Appearance",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>As a bonus action she covers herself with an illusion of a Medium humanoid. It ends if she dismisses it, dies, or a creature uses an action to inspect her and succeeds on a DC 14 Intelligence (Investigation) check. The illusion never hides her wet shadow.</p>"
+        },
+        "identifier": "illusory-appearance",
+        "activities": {
+          "illusorycovencov": {
+            "type": "utility",
+            "activation": {
+              "type": "bonus",
+              "value": 1
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Horrific Appearance",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Any humanoid that starts its turn within 30 feet of Morgha's true form and can see her must succeed on a DC 14 Wisdom save or be frightened for 1 minute (repeat at end of turn; on success, immune 24 hours). On a failure by 5 or more, the creature also drops to 0 hit points unless already frightened of her.</p>"
+        },
+        "identifier": "horrific-appearance",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Brine Step",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>As a bonus action, Morgha teleports up to 30 feet to a space she can see containing standing water, ice, or barnacles.</p>"
+        },
+        "identifier": "brine-step",
+        "activities": {
+          "brinestepcovenco": {
+            "type": "utility",
+            "activation": {
+              "type": "bonus",
+              "value": 1
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Multiattack",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Morgha makes two claw attacks.</p>"
+        },
+        "identifier": "multiattack",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Claw",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +6 to hit, reach 5 ft., one target. <em>Hit:</em> 10 (2d6 + 3) slashing damage.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "claw",
+        "activities": {
+          "clawcovencoveact": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 2,
+                  "denomination": 6,
+                  "bonus": "3",
+                  "types": [
+                    "slashing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Death Glare",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>One frightened creature Morgha can see within 30 feet must succeed on a DC 14 Wisdom save or drop to 0 hit points.</p>"
+        },
+        "identifier": "death-glare",
+        "activities": {
+          "deathglarecovenc": {
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "14"
+              }
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Salt-Smother (Recharge 5-6)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Brine in a 15-foot cone: DC 14 Constitution save, 18 (4d8) necrotic damage on a failure, half on success. On a failure the creature's mouth fills with phantom seawater for 1 minute: no speech, no verbal components, no calling for help (repeat save at end of turn).</p>"
+        },
+        "identifier": "salt-smother-(recharge-5-6)",
+        "activities": {
+          "saltsmothercoven": {
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 4,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "necrotic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "con"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "14"
+              }
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0,
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "type": "cone",
+                "size": "15",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false
+              }
+            }
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    }
+  ],
+  "effects": []
+}

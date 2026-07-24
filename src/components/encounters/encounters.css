@@ -1,0 +1,26 @@
+/* ENCOUNTERS page-local styles (encounters.md §3) */
+
+/* Wind-Teeth Swarm header — CSS sand-swirl: animated conic streaks on warm dark.
+   Rendered on an oversized inner layer so rotation never shows edges. */
+.sand-swirl {
+  background:
+    repeating-conic-gradient(
+      from 0deg at 50% 55%,
+      rgba(255, 157, 92, 0.16) 0deg 7deg,
+      transparent 7deg 22deg,
+      rgba(201, 138, 90, 0.1) 22deg 30deg,
+      transparent 30deg 47deg
+    ),
+    #2a1e26;
+  animation: sand-swirl-spin 26s linear infinite;
+  will-change: transform;
+}
+@keyframes sand-swirl-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sand-swirl {
+    animation: none;
+  }
+}

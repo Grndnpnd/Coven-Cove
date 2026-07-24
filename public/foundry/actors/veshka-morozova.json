@@ -1,0 +1,573 @@
+{
+  "name": "Veshka Morozova",
+  "type": "npc",
+  "img": "assets/tokens/veshka-morozova.png",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 13,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 16,
+        "proficient": 1
+      },
+      "con": {
+        "value": 18,
+        "proficient": 0
+      },
+      "int": {
+        "value": 12,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 15,
+        "proficient": 1
+      },
+      "cha": {
+        "value": 18,
+        "proficient": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 17
+      },
+      "hp": {
+        "value": 136,
+        "max": 136,
+        "formula": "16d8 + 64"
+      },
+      "movement": {
+        "walk": 30,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "neutral evil",
+      "cr": 10,
+      "xp": {
+        "value": 5900
+      },
+      "type": {
+        "value": "fey",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "biography": {
+        "value": "<p>Bheur hag of the Storm-Cast Future; daughter of Endelyn Moongrave of Yon and one of the Three who rule Coven Cove. Tall, hook-backed, wrapped in a ragged aurora of violet and gray, carrying the Masthead Staff whose bells ring only when someone in the room is about to lie. The most openly frightening of the Three and the most fragile; she is assembling a killing-winter ritual in the ice cliffs east of town and has not decided whether to use it. While the coven circle is dead she has no Shared Spellcasting, no Hag Eye, and the omens have gone quiet.</p>",
+        "public": ""
+      },
+      "source": {
+        "custom": "Coven Cove GM Guide",
+        "revision": 1,
+        "rules": "2014"
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 0
+      },
+      "ani": {
+        "value": 0
+      },
+      "arc": {
+        "value": 1
+      },
+      "ath": {
+        "value": 0
+      },
+      "dec": {
+        "value": 1
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 0
+      },
+      "itm": {
+        "value": 0
+      },
+      "inv": {
+        "value": 0
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 1
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 0
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 1
+      },
+      "sur": {
+        "value": 0
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "giant",
+          "sylvan"
+        ],
+        "custom": "Auran"
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Veshka Morozova",
+    "texture": {
+      "src": "assets/tokens/veshka-morozova.png"
+    }
+  },
+  "items": [
+    {
+      "name": "Ice Walk",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Veshka can move across and climb icy surfaces without an ability check, and difficult terrain composed of ice or snow doesn't cost her extra movement.</p>"
+        },
+        "identifier": "ice-walk",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Masthead Staff (Graystaff Magic)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Her staff is a spellcasting focus. Its bells ring when a creature within 30 feet deliberately lies (only Veshka hears them unless she wills otherwise). While she holds it, her innate spellcasting expands as below; without it she loses the 1/day spells and <em>ray of frost</em>.</p>"
+        },
+        "identifier": "masthead-staff-(graystaff-magic)",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Innate Spellcasting",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Veshka's innate spellcasting ability is Charisma (spell save DC 16, +8 to hit with spell attacks). She can innately cast the following spells, requiring no material components: At will: <em>ray of frost</em> (2d8 + 4 cold and speed reduced 10 ft.); 3/day each: <em>fog cloud</em>, <em>sleet storm</em>; 1/day each (staff only): <em>ice storm</em>, <em>wall of ice</em>, <em>cone of cold</em>.</p>"
+        },
+        "identifier": "innate-spellcasting",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Despairing Feast",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>When a creature Veshka can see fails a saving throw against one of her spells or abilities, she can use her reaction to feed on the despair, gaining 10 temporary hit points.</p>"
+        },
+        "identifier": "despairing-feast",
+        "activities": {
+          "despaircovencove": {
+            "type": "utility",
+            "activation": {
+              "type": "reaction",
+              "value": 1
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Multiattack",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Veshka makes two Graystaff attacks.</p>"
+        },
+        "identifier": "multiattack",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Graystaff",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +7 to hit, reach 5 ft., one target. <em>Hit:</em> 5 (1d8 + 1) bludgeoning damage plus 9 (2d8) cold damage.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "graystaff",
+        "activities": {
+          "graystaffcovenco": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 8,
+                  "bonus": "1",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                },
+                {
+                  "number": 2,
+                  "denomination": 8,
+                  "bonus": "",
+                  "types": [
+                    "cold"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Howling Dirge (Recharge 5-6)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Storm-keened prophecy in a 30-foot cone: DC 16 Wisdom save, 27 (5d8 + 4) psychic damage and frightened for 1 minute on a failure, half damage and no fear on success (repeat save at end of turn). A frightened creature sees its own death staged in the ice.</p>"
+        },
+        "identifier": "howling-dirge-(recharge-5-6)",
+        "activities": {
+          "dirgecovencoveac": {
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "damage": {
+              "onSave": "half",
+              "parts": [
+                {
+                  "number": 5,
+                  "denomination": 8,
+                  "bonus": "4",
+                  "types": [
+                    "psychic"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "save": {
+              "ability": [
+                "wis"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "16"
+              }
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0,
+            "target": {
+              "prompt": true,
+              "template": {
+                "contiguous": false,
+                "type": "cone",
+                "size": "30",
+                "width": "",
+                "height": "",
+                "units": "ft"
+              },
+              "affects": {
+                "count": "",
+                "type": "",
+                "choice": false
+              }
+            }
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Ray of Frost",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, +8 to hit), at will, requires the Masthead Staff. Hit: 2d8 + 4 cold damage and the target's speed is reduced 10 ft.</p>"
+        },
+        "level": 0,
+        "school": "evo",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Fog Cloud",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 16), 3/day.</p>"
+        },
+        "level": 1,
+        "school": "con",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Sleet Storm",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 16), 3/day.</p>"
+        },
+        "level": 3,
+        "school": "con",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Ice Storm",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 16), 1/day. Requires the Masthead Staff.</p>"
+        },
+        "level": 4,
+        "school": "evo",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Wall of Ice",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 16), 1/day. Requires the Masthead Staff.</p>"
+        },
+        "level": 6,
+        "school": "evo",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Cone of Cold",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 16), 1/day. Requires the Masthead Staff.</p>"
+        },
+        "level": 5,
+        "school": "evo",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    }
+  ],
+  "effects": []
+}

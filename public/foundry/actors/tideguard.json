@@ -1,0 +1,460 @@
+{
+  "name": "Tideguard",
+  "type": "npc",
+  "img": "assets/tokens/tideguard.png",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 16,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0
+      },
+      "con": {
+        "value": 14,
+        "proficient": 0
+      },
+      "int": {
+        "value": 10,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 12,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 10,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 14
+      },
+      "hp": {
+        "value": 58,
+        "max": 58,
+        "formula": "9d8 + 18"
+      },
+      "movement": {
+        "walk": 30,
+        "units": "ft",
+        "hover": false,
+        "swim": 20
+      },
+      "senses": {
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "lawful neutral",
+      "cr": 3,
+      "xp": {
+        "value": 700
+      },
+      "type": {
+        "value": "humanoid",
+        "subtype": "hag-crafted",
+        "swarm": "",
+        "custom": ""
+      },
+      "biography": {
+        "value": "<p>A hag-crafted town guard of Coven Cove, answering to Captain Barra Coldvein and the Tide-Court. Tideguard operate in fours with a sergeant: a police action, not a warband. They grapple, interpose, harpoon ankles, and drag offenders off the seam. Four of them is a Medium encounter the party cannot win socially, even by winning.</p>",
+        "public": ""
+      },
+      "source": {
+        "custom": "Coven Cove GM Guide",
+        "revision": 1,
+        "rules": "2014"
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 0
+      },
+      "ani": {
+        "value": 0
+      },
+      "arc": {
+        "value": 0
+      },
+      "ath": {
+        "value": 1
+      },
+      "dec": {
+        "value": 0
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 1
+      },
+      "itm": {
+        "value": 0
+      },
+      "inv": {
+        "value": 0
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 1
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 0
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 0
+      },
+      "sur": {
+        "value": 0
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "sylvan"
+        ],
+        "custom": "harbor-cant"
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Tideguard",
+    "texture": {
+      "src": "assets/tokens/tideguard.png"
+    }
+  },
+  "items": [
+    {
+      "name": "Seam-Sense",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Within Coven Cove, the Tideguard can't be surprised, and instinctively knows which side of the seam it stands on in total darkness.</p>"
+        },
+        "identifier": "seam-sense",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Hag-Crafted",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Advantage on saves against being charmed or frightened while it can see the triple-moon sigil. (While the coven circle is dead, this is <em>habit and faith</em>, not magic — the town doesn't know that, and Barra isn't saying.)</p>"
+        },
+        "identifier": "hag-crafted",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Multiattack",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>The Tideguard makes two attacks.</p>"
+        },
+        "identifier": "multiattack",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Harpoon",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee or Ranged Weapon Attack:</em> +5 to hit, reach 5 ft. or range 20/60 ft., one target. <em>Hit:</em> 8 (1d10 + 3) piercing damage. On a thrown hit, the Tideguard can pull a Large or smaller creature 10 feet toward it.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "harpoon",
+        "activities": {
+          "harpoonmeleecove": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 10,
+                  "bonus": "3",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          },
+          "harpoonrangedcov": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "ranged",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 10,
+                  "bonus": "3",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "20",
+              "long": "60"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Belaying Club",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +5 to hit, reach 5 ft., one target. <em>Hit:</em> 6 (1d6 + 3) bludgeoning damage.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "belaying-club",
+        "activities": {
+          "belayingclubcove": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 1,
+                  "denomination": 6,
+                  "bonus": "3",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Keep the Peace",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>When a creature within 5 feet makes an attack against a target other than the Tideguard, the Tideguard can use its reaction to impose disadvantage on the roll by interposing shield, body, or gaff.</p>"
+        },
+        "identifier": "keep-the-peace",
+        "activities": {
+          "keepthepeacecove": {
+            "type": "utility",
+            "activation": {
+              "type": "reaction",
+              "value": 1
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    }
+  ],
+  "effects": []
+}

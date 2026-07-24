@@ -1,0 +1,618 @@
+{
+  "name": "Raspka Irongrinn (Granny Threadbare)",
+  "type": "npc",
+  "img": "assets/tokens/raspka-irongrinn.png",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 21,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 12,
+        "proficient": 0
+      },
+      "con": {
+        "value": 20,
+        "proficient": 1
+      },
+      "int": {
+        "value": 13,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 14,
+        "proficient": 1
+      },
+      "cha": {
+        "value": 15,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 21
+      },
+      "hp": {
+        "value": 147,
+        "max": 147,
+        "formula": "14d10 + 70"
+      },
+      "movement": {
+        "walk": 40,
+        "units": "ft",
+        "hover": false
+      },
+      "senses": {
+        "darkvision": 60,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "neutral evil",
+      "cr": 9,
+      "xp": {
+        "value": 5000
+      },
+      "type": {
+        "value": "fey",
+        "subtype": "",
+        "swarm": "",
+        "custom": ""
+      },
+      "biography": {
+        "value": "<p>Annis hag of the Iron Present; daughter of Skabatha of Thither and one of the Three who rule Coven Cove. Eight feet of iron-shod appetite, always mending something: a net, a doll, a sail, a wound, a person. She runs the shipyards and is secretly feeding her own blood and thread to the dormant mimic-hulk in Drydock Seven, trying to birth a ship without the circle. While the coven circle is dead she has no Shared Spellcasting, no Hag Eye, and no shipbirth ritual; her <em>animate objects</em> is hers alone.</p>",
+        "public": ""
+      },
+      "source": {
+        "custom": "Coven Cove GM Guide",
+        "revision": 1,
+        "rules": "2014"
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 0
+      },
+      "ani": {
+        "value": 0
+      },
+      "arc": {
+        "value": 0
+      },
+      "ath": {
+        "value": 0
+      },
+      "dec": {
+        "value": 1
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 1
+      },
+      "itm": {
+        "value": 1
+      },
+      "inv": {
+        "value": 0
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 1
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 0
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 0
+      },
+      "sur": {
+        "value": 0
+      }
+    },
+    "traits": {
+      "size": "lg",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [],
+        "custom": ""
+      },
+      "dv": {
+        "value": [],
+        "custom": ""
+      },
+      "ci": {
+        "value": [],
+        "custom": ""
+      },
+      "languages": {
+        "value": [
+          "common",
+          "giant",
+          "sylvan"
+        ],
+        "custom": ""
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Raspka Irongrinn (Granny Threadbare)",
+    "texture": {
+      "src": "assets/tokens/raspka-irongrinn.png"
+    }
+  },
+  "items": [
+    {
+      "name": "Innate Spellcasting",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Raspka's innate spellcasting ability is Charisma (spell save DC 14). She can innately cast the following spells, requiring no material components: 3/day each: <em>disguise self</em> (Small or Medium humanoid), <em>fog cloud</em>; 1/day: <em>animate objects</em> (her doll-toys only).</p>"
+        },
+        "identifier": "innate-spellcasting",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Puppet Strings",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Her animated toys carry thread-tethers back to her claws. While any of them is within 30 feet, she can use her reaction when hit by an attack to make one of them the target instead.</p>"
+        },
+        "identifier": "puppet-strings",
+        "activities": {
+          "puppetcovencovea": {
+            "type": "utility",
+            "activation": {
+              "type": "reaction",
+              "value": 1
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Multiattack",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>Raspka makes three attacks: one with her Bite and two with her Claws.</p>"
+        },
+        "identifier": "multiattack",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Bite",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +9 to hit, reach 5 ft., one target. <em>Hit:</em> 16 (3d6 + 5) piercing damage.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "bite",
+        "activities": {
+          "bitecovencoveact": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 3,
+                  "denomination": 6,
+                  "bonus": "5",
+                  "types": [
+                    "piercing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Claw",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +9 to hit, reach 10 ft., one target. <em>Hit:</em> 14 (2d6 + 5) slashing damage, and the target is grappled (escape DC 15). Raspka can grapple up to two creatures.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "claw",
+        "activities": {
+          "clawcovencoveact": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 2,
+                  "denomination": 6,
+                  "bonus": "5",
+                  "types": [
+                    "slashing"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "10"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Crushing Hug",
+      "type": "weapon",
+      "system": {
+        "description": {
+          "value": "<p><em>Melee Weapon Attack:</em> +9 to hit, one creature she is grappling. <em>Hit:</em> 36 (5d10 + 9) bludgeoning damage, and she can't make Claw attacks until the hug ends. It ends if she releases the grapple or is forced to move.</p>"
+        },
+        "type": {
+          "value": "simpleM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "identified": true,
+        "proficient": true,
+        "quantity": 1,
+        "identifier": "crushing-hug",
+        "activities": {
+          "crushinghugcoven": {
+            "type": "attack",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "attack": {
+              "ability": "",
+              "bonus": "",
+              "critical": {
+                "threshold": 20
+              },
+              "flat": false,
+              "type": {
+                "value": "melee",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": false,
+              "parts": [
+                {
+                  "number": 5,
+                  "denomination": 10,
+                  "bonus": "9",
+                  "types": [
+                    "bludgeoning"
+                  ],
+                  "custom": {
+                    "enabled": false,
+                    "formula": ""
+                  }
+                }
+              ]
+            },
+            "range": {
+              "units": "ft",
+              "override": true,
+              "value": "5"
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Sew the Wound (Recharge 5-6)",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>She stitches her own wounds, regaining 22 (4d8 + 4) hit points. Alternatively she stitches a creature's <em>shadow</em> to the ground (reach 10 ft.): DC 15 Strength save or restrained 1 minute (repeat at end of turn; shadowless creatures are immune, which she notes with great interest).</p>"
+        },
+        "identifier": "sew-the-wound-(recharge-5-6)",
+        "activities": {
+          "sewhealcovencove": {
+            "type": "heal",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "healing": {
+              "number": 4,
+              "denomination": 8,
+              "bonus": "4",
+              "types": [
+                "healing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              }
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          },
+          "sewshadowcovenco": {
+            "type": "save",
+            "activation": {
+              "type": "action",
+              "value": 1
+            },
+            "damage": {
+              "onSave": "none",
+              "parts": []
+            },
+            "save": {
+              "ability": [
+                "str"
+              ],
+              "dc": {
+                "calculation": "",
+                "formula": "15"
+              }
+            },
+            "consumption": {
+              "scaling": {
+                "allowed": false
+              },
+              "spellSlot": true,
+              "targets": []
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            },
+            "sort": 0
+          }
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Disguise Self",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 14), 3/day. Small or Medium humanoid forms only.</p>"
+        },
+        "level": 1,
+        "school": "ill",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Fog Cloud",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 14), 3/day.</p>"
+        },
+        "level": 1,
+        "school": "con",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Animate Objects",
+      "type": "spell",
+      "system": {
+        "description": {
+          "value": "<p>Innate spellcasting (Charisma-based, spell save DC 14), 1/day. Works on her doll-toys only.</p>"
+        },
+        "level": 5,
+        "school": "trs",
+        "method": "innate",
+        "prepared": 2,
+        "preparation": {
+          "mode": "innate",
+          "prepared": true
+        },
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        },
+        "activities": {}
+      }
+    }
+  ],
+  "effects": []
+}

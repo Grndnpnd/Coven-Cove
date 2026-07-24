@@ -1,0 +1,227 @@
+{
+  "name": "Wind-Teeth Swarm",
+  "type": "npc",
+  "img": "assets/tokens/wind-teeth-swarm.png",
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 3,
+        "proficient": 0
+      },
+      "dex": {
+        "value": 15,
+        "proficient": 0
+      },
+      "con": {
+        "value": 12,
+        "proficient": 0
+      },
+      "int": {
+        "value": 2,
+        "proficient": 0
+      },
+      "wis": {
+        "value": 10,
+        "proficient": 0
+      },
+      "cha": {
+        "value": 2,
+        "proficient": 0
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 12
+      },
+      "hp": {
+        "value": 55,
+        "max": 55,
+        "formula": "10d8 + 10"
+      },
+      "movement": {
+        "walk": 0,
+        "units": "ft",
+        "hover": true,
+        "fly": 50
+      },
+      "senses": {
+        "blindsight": 60,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "unaligned",
+      "cr": 4,
+      "xp": {
+        "value": 1100
+      },
+      "type": {
+        "value": "fey",
+        "subtype": "",
+        "swarm": "tiny",
+        "custom": ""
+      },
+      "biography": {
+        "value": "<p>A sand-shred hazard given teeth: a swarm of Tiny fey grit-motes riding the Bleach's coral-sand winds, sharp as ground glass. Cold damage, <em>gust of wind</em>, and shelter are the answers; swords are a prayer. One swarm in a Shred Gale is a Medium encounter with teeth; two swarms in the Grinder Heart is the wall-of-teeth moment.</p>",
+        "public": ""
+      },
+      "source": {
+        "custom": "Coven Cove GM Guide",
+        "revision": 1,
+        "rules": "2014"
+      }
+    },
+    "skills": {
+      "acr": {
+        "value": 0
+      },
+      "ani": {
+        "value": 0
+      },
+      "arc": {
+        "value": 0
+      },
+      "ath": {
+        "value": 0
+      },
+      "dec": {
+        "value": 0
+      },
+      "his": {
+        "value": 0
+      },
+      "ins": {
+        "value": 0
+      },
+      "itm": {
+        "value": 0
+      },
+      "inv": {
+        "value": 0
+      },
+      "med": {
+        "value": 0
+      },
+      "nat": {
+        "value": 0
+      },
+      "prc": {
+        "value": 0
+      },
+      "prf": {
+        "value": 0
+      },
+      "per": {
+        "value": 0
+      },
+      "rel": {
+        "value": 0
+      },
+      "slt": {
+        "value": 0
+      },
+      "ste": {
+        "value": 0
+      },
+      "sur": {
+        "value": 0
+      }
+    },
+    "traits": {
+      "size": "med",
+      "di": {
+        "value": [],
+        "custom": ""
+      },
+      "dr": {
+        "value": [
+          "bludgeoning",
+          "piercing",
+          "slashing"
+        ],
+        "custom": ""
+      },
+      "dv": {
+        "value": [
+          "cold"
+        ],
+        "custom": ""
+      },
+      "ci": {
+        "value": [
+          "charmed",
+          "frightened",
+          "grappled",
+          "paralyzed",
+          "petrified",
+          "prone",
+          "restrained",
+          "stunned"
+        ],
+        "custom": ""
+      },
+      "languages": {
+        "value": [],
+        "custom": ""
+      }
+    }
+  },
+  "prototypeToken": {
+    "name": "Wind-Teeth Swarm",
+    "texture": {
+      "src": "assets/tokens/wind-teeth-swarm.png"
+    }
+  },
+  "items": [
+    {
+      "name": "Swarm",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>The swarm can occupy another creature's space and move through any opening large enough for a Tiny mote (1-inch openings); it can't regain hit points.</p>"
+        },
+        "identifier": "swarm",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Abrasion",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>A creature starting its turn in the swarm's space takes 7 (2d6) slashing damage, and nonmetallic armor worn takes a cumulative -1 AC penalty (max -3) until repaired. Unattended rope, sailcloth, and leather in the space take 7 damage per round.</p>"
+        },
+        "identifier": "abrasion",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    },
+    {
+      "name": "Riding the Gale",
+      "type": "feat",
+      "system": {
+        "description": {
+          "value": "<p>In a Shred Gale or Grinder Heart its speed doubles and Abrasion becomes 10 (3d6).</p>"
+        },
+        "identifier": "riding-the-gale",
+        "activities": {},
+        "uses": {
+          "max": "",
+          "spent": 0,
+          "recovery": []
+        }
+      }
+    }
+  ],
+  "effects": []
+}
